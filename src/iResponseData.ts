@@ -21,6 +21,7 @@ type Country = {
     Date: string;
     ID: string;
     NewConfirmed: number;
+    NewDeaths: number;
     NewRecovered: number;
     Premium: unknown;
     Slug: string;
