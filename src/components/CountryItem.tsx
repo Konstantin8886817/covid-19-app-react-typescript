@@ -19,7 +19,6 @@ const ListContent = styled.div<ContentPropsItem>`
     padding: 10px 0;
 `;
 
-
 const CountryItem: React.FunctionComponent<PropsItem> = ({ country, onItemClick }) => {
     const [isActive, setIsActive] = useState<boolean>(false);
     const handleOnClick = (country: Country) => {
@@ -29,14 +28,14 @@ const CountryItem: React.FunctionComponent<PropsItem> = ({ country, onItemClick 
 
     return (
         <ListItem key={country.ID} onClick={() => handleOnClick(country)}>
-                    <ListContent isActive={isActive}>
-                        <h4>{country.Country}</h4>
-                        <div>New Confirmed: {country.NewConfirmed}</div>
-                        <div>New Deaths: {country.NewDeaths}</div>
-                        <div>New Recovered: {country.NewRecovered}</div>
-                    </ListContent>
-                    
-                </ListItem>
+            <ListContent isActive={isActive}>
+                <h4>{country.Country}</h4>
+                <div>New Confirmed: {country.NewConfirmed}</div>
+                <div>New Deaths: {country.NewDeaths}</div>
+                <div>New Recovered: {country.NewRecovered}</div>
+            </ListContent>
+
+        </ListItem>
     )
 };
 

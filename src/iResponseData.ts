@@ -26,7 +26,7 @@ export type IResponseData = {
     Global: GlobalData;
     ID: string;
     Message: string;
-  };
+};
 
 export type Country = {
     Country: string;

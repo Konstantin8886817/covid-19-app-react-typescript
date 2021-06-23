@@ -12,7 +12,7 @@ const CountryList: React.FunctionComponent<PropsCountries> = ({ countries, onIte
     return (
         <ListWrapper>
             {countries.map((country) => (
-                <CountryItem country={country} onItemClick={onItemClick}/>
+                <CountryItem country={country} onItemClick={onItemClick} />
             ))}
         </ListWrapper>
     )
