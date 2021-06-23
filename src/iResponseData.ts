@@ -1,5 +1,6 @@
 export interface PropsCountries {
     countries: Country[];
+    onItemClick: (country: Country) => void;
 }
 export interface Props {
     newConfirmed: number;
@@ -15,7 +16,7 @@ export type IResponseData = {
     Message: string;
   };
 
-type Country = {
+export type Country = {
     Country: string;
     CountryCode: string;
     Date: string;
