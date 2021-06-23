@@ -16,17 +16,23 @@ const ListItem = styled.li`
     }
 `;
 
+const ListContent = styled.div`
+    background-color: #9ce0d0;
+    margin: 5px;
+    padding: 10px 0;
+`;
+
 const CountryList: React.FunctionComponent<PropsCountries> = ({ countries }) => {
     return (
         <ListWrapper>
             {countries.map((country) => (
                 <ListItem key={country.ID}>
-                    <div>
+                    <ListContent>
                         <h4>{country.Country}</h4>
                         <div>New Confirmed: {country.NewConfirmed}</div>
                         <div>New Deaths: {country.NewDeaths}</div>
                         <div>New Recovered: {country.NewRecovered}</div>
-                    </div>
+                    </ListContent>
                     
                 </ListItem>
             ))}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import GlobalInfo from "./components/GlobalInfo";
 import CountryList from "./components/CountryList";
 import  { IResponseData } from "./iResponseData";
+import { Global, css } from "@emotion/react";
 
 const App: React.FunctionComponent = () => {
   const [data, setData] = useState<IResponseData | undefined>(undefined);
@@ -19,6 +20,11 @@ const App: React.FunctionComponent = () => {
 
   return (
     <div>
+      <Global styles={css`
+        body {
+          background-color: #f1f1f1;
+        } 
+      `}/>
       {data ? (
         <>
       <GlobalInfo 
