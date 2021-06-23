@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
+import  { IResponseData } from "./iResponseData";
 
 const App: React.FunctionComponent = () => {
-  const [data, setData] = useState(undefined);
+  const [data, setData] = useState<IResponseData | undefined>(undefined);
 
   const fetchData = async () => {
     const result = await fetch('https://api.covid19api.com/summary');
-    const data = await result.json();
+    const data: IResponseData = await result.json();
 
     setData(data);
-    console.log(data);
-    
   };
 
   useEffect(() => {
