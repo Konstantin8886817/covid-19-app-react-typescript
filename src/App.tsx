@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import GlobalInfo from "./components/GlobalInfo";
+import CountryList from "./components/CountryList";
 import  { IResponseData } from "./iResponseData";
 
 const App: React.FunctionComponent = () => {
@@ -17,7 +19,17 @@ const App: React.FunctionComponent = () => {
 
   return (
     <div>
-      <h1>Global Covid-19 App</h1>
+      {data ? (
+        <>
+      <GlobalInfo 
+      newConfirmed={data?.Global.NewConfirmed} 
+      newDeaths={data?.Global.NewDeaths} 
+      newRecovered={data?.Global.NewRecovered}/>
+
+      <CountryList countries={data.Countries}/>
+      </>
+      ) : ('Loading...'
+      )}
     </div>
   );
 }

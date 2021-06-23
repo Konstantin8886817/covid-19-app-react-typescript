@@ -1,7 +1,16 @@
+export interface PropsCountries {
+    countries: Country[];
+}
+export interface Props {
+    newConfirmed: number;
+    newDeaths: number;
+    newRecovered: number;
+};
+
 export type IResponseData = {
     Countries: Country[];
     Date: string;
-    Global: GlobalData[];
+    Global: GlobalData;
     ID: string;
     Message: string;
   };
