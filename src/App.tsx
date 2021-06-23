@@ -39,8 +39,6 @@ const App: React.FunctionComponent = () => {
         } 
       `}/>
 
-      {activeCountries.map((aCountry) => <span>{aCountry.Country}</span>)}
-
       {data ? (
         <>
       <GlobalInfo 

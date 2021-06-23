@@ -1,3 +1,11 @@
+export interface ContentPropsItem {
+    isActive: boolean;
+}
+
+export interface PropsItem {
+    country: Country;
+    onItemClick: (country: Country) => void;
+}
 export interface PropsCountries {
     countries: Country[];
     onItemClick: (country: Country) => void;
