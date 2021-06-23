@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import GlobalInfo from "./components/GlobalInfo";
-import CountryList from "./components/CountryList";
 import  { Country, IResponseData } from "./iResponseData";
 import { Global, css } from "@emotion/react";
+import CountryList from "./components/CountryList";
+import BarChart from "./components/BarChart";
 
 const App: React.FunctionComponent = () => {
   const [data, setData] = useState<IResponseData | undefined>(undefined);
@@ -45,7 +46,10 @@ const App: React.FunctionComponent = () => {
       newConfirmed={data?.Global.NewConfirmed} 
       newDeaths={data?.Global.NewDeaths} 
       newRecovered={data?.Global.NewRecovered}/>
-
+      <hr/>
+      
+      {activeCountries.length ? <BarChart countries={activeCountries}/> : null}
+      
       <CountryList countries={data.Countries} onItemClick={onCountryClick}/>
       </>
       ) : ('Loading...'

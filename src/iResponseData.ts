@@ -1,3 +1,7 @@
+export interface BarChartProps {
+    countries: Country[];
+}
+
 export interface ContentPropsItem {
     isActive: boolean;
 }
